@@ -1,5 +1,5 @@
 <template>
-	<div class=" min-h-screen">
+	<div class=" min-h-screen max-w-screen relative isolate w-full">
 		<section class="flex flex-col">
 			<HeroNav />
 			<slot />
@@ -8,6 +8,15 @@
 
 		<ModalBase />
 		<Alert />
+
+		<div class="flex items-center absolute justify-center gap-5  w-full bottom-4 -z-10">
+			<nuxt-link to="/privacy" class="underline">
+				Privacy Policy
+			</nuxt-link>
+			<nuxt-link to="/terms" class="underline">
+				Terms of Service
+			</nuxt-link>
+		</div>
 	</div>
 </template>
 

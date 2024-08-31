@@ -2,14 +2,14 @@
 	<main class=" h-full container grid lg:grid-cols-2 gap-12 items-center justify-start  md:py-32 py-10">
 		<section class="md:text-start text-center px-4">
 			<h1 class="md:text-7xl text-5xl font-extrabold mb-4 pathway leading-[1.2]">
-				Booking Simplified
+				Forms Simplified
 			</h1>
 			<p class="md:text-2xl text-lg font-medium md:font-normal text-dark mb-8 ">
-				Create personalized booking pages, manage appointments effortlessly, and get paid seamlessly. Tailored for African entrepreneurs, perfect for everyone.
+				Receive instant WhatsApp and email notifications, redirect users after submission, and integrate with your own systems using our API endpoints. Perfect for businesses, educators, and anyone needing quick and easy form solutions.
 			</p>
 			<div class="flex gap-4 items-center w-full justify-center md:justify-start">
 				<nuxt-link to="/booking-types" class="bg-black text-white md:py-4 py-3 md:px-6 px-8 rounded-md md:text-[17px]">
-					Create a booking page
+					Create a Form
 				</nuxt-link>
 				<!-- <a class="md:text-xl font-semibold underline " href="https://www.youtube.com/watch?v=f3XQRsgvRTU&ab_channel=Kromate" target="_blank" rel="noopener noreferrer">Watch a Demo</a> -->
 			</div>
