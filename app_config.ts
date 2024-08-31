@@ -19,38 +19,38 @@ export default {
             },
             {
                 name: 'title',
-                content: 'Bookings - Simplified Bookings, Amplified Business'
+                content: 'Forms - Simplified Forms, Amplified Business'
             },
             {
                 name: 'description',
-                content: 'Create personalized booking pages, manage appointments effortlessly, and get paid seamlessly. Tailored for African entrepreneurs, perfect for everyone.'
+                content: 'Create personalized forms, manage submissions effortlessly, and integrate seamlessly. Perfect for businesses, educators, and anyone needing quick and easy form solutions.'
             },
             {
                 name: 'twitter:title',
-                content: 'Bookings - Simplified Bookings, Amplified Business'
+                content: 'Forms - Simplified Forms, Amplified Business'
             },
-            { name: 'twitter:image', content: 'https://bookings.taaskly.site/og2.png' },
+            { name: 'twitter:image', content: 'https://forms.taaskly.site/og2.png' },
             {
                 name: 'twitter:description',
-                content: 'Create personalized booking pages, manage appointments effortlessly, and get paid seamlessly. Tailored for African entrepreneurs, perfect for everyone.'
+                content: 'Create personalized forms, manage submissions effortlessly, and integrate seamlessly. Perfect for businesses, educators, and anyone needing quick and easy form solutions.'
             },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: '@kromate_24' },
             { name: 'twitter:creator', content: '@kromate_24' },
             {
                 property: 'og:title',
-                content: 'Bookings | Simplified Bookings, Amplified Business'
+                content: 'Forms | Simplified Forms, Amplified Business'
             },
             { name: 'google-site-verification', content: 'tWttF6w3RHPlNPm5u7KSRgh4lgkRUZ2Bwl6QzECjY18' },
             { property: 'og:type', content: 'website' },
-            { property: 'og:url', content: 'https://bookings.taaskly.site/' },
-            { property: 'og:image', content: 'https://bookings.taaskly.site/og2.png' },
-            { property: 'og:image:secure_url', content: 'https://bookings.taaskly.site/og2.png' },
+            { property: 'og:url', content: 'https://forms.taaskly.site/' },
+            { property: 'og:image', content: 'https://forms.taaskly.site/og2.png' },
+            { property: 'og:image:secure_url', content: 'https://forms.taaskly.site/og2.png' },
             { property: 'og:image:type', content: 'image/png' },
-            { property: 'og:site_name', content: 'Bookings' },
+            { property: 'og:site_name', content: 'Forms' },
             {
                 property: 'og:description',
-                content: 'Create personalized booking pages, manage appointments effortlessly, and get paid seamlessly. Tailored for African entrepreneurs, perfect for everyone.'
+                content: 'Create personalized forms, manage submissions effortlessly, and integrate seamlessly. Perfect for businesses, educators, and anyone needing quick and easy form solutions.'
             },
 
             { name: 'format-detection', content: 'telephone=no' }

@@ -1,10 +1,10 @@
+import { useFetchAvailabilityById } from 'src/composables/dashboard/forms/id'
 import { booking_create_utils } from './create_utils'
 import { convertObjWithRefToObj } from '@/composables/utils/formatter'
 import { useUser } from '@/composables/auth/user'
 import { useAlert } from '@/composables/core/notification'
 import { useLoadingNotification } from '@/composables/core/verificationLoader'
 import { callFirebaseFunction } from '@/firebase/functions'
-import { useFetchAvailabilityById } from '@/composables/dashboard/availability/id'
 import { useMakePayment } from '@/composables/payment/paystack'
 
 

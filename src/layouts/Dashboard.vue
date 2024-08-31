@@ -1,7 +1,7 @@
 <template>
 	<ClientOnly>
 		<div class="flex w-full h-screen bg-light relative  md:py-0  px-0 overflow-y-hidden ">
-			<LayoutsSideBarLeftSidebar :routes="mainShowRoutes" />
+
 
 			<div class="relative bg-light page w-full border-x border-dark mx  h-screen sm:h-auto   overflow-hidden">
 				<LayoutsDashboadHeader :is-business="false" />
@@ -13,14 +13,14 @@
 				</div>
 				<ModalBase />
 			</div>
-			<LayoutsBottomBar :drawer-function="useBottombarModal().toggleBottomMenu" :routes="mainBottomNavRoutes" />
+
 		</div>
 	</ClientOnly>
 </template>
 
 
 <script setup lang="ts">
-import { useBottombarModal } from '@/composables/core/modals'
+
 import { dashboardRoutes } from '@/composables/utils/menu/dashboard'
 import { useUser } from '@/composables/auth/user'
 
@@ -60,6 +60,7 @@ const mainBottomNavRoutes = dashboardRoutes().filter((route) => route.main === t
 		margin-left: 3.5rem;
 		margin-right: 0;
 	}
+
 	@media (max-width:768px) {
 		margin-left: 0;
 		margin-right: 0;

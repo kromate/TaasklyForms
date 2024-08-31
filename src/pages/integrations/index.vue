@@ -44,7 +44,7 @@ const { link, loading: linkGoogleCalLoading, integrationKeys } = useLinkGoogleCa
 
 const hasGoogleCal = computed(() => {
 	if (hasIntegration(integrationKeys.google_calendar).value) {
-	const data = fetchedIntegrations.value.filter((integration) => integration.id === integrationKeys.google_calendar)
+		const data = fetchedIntegrations.value.filter((integration) => integration.id === integrationKeys.google_calendar)
 		return {
 			status: true,
 			...data[0]
@@ -63,18 +63,16 @@ fetchUserIntegrations()
 definePageMeta({
 	layout: 'dashboard',
 	middleware: ['is-authenticated', () => {
-usePageHeader().setPageHeader({
-	title: 'Integrations',
-	description: 'Connect your account with other services',
+		usePageHeader().setPageHeader({
+			title: 'Integrations',
+			description: 'Connect your account with other services',
 
-	shouldShowFab: false,
-	shouldShowTab: false
+			shouldShowFab: false,
+			shouldShowTab: false
 
-})
+		})
 	}]
 })
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

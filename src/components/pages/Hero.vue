@@ -8,7 +8,7 @@
 				Receive instant WhatsApp and email notifications, redirect users after submission, and integrate with your own systems using our API endpoints. Perfect for businesses, educators, and anyone needing quick and easy form solutions.
 			</p>
 			<div class="flex gap-4 items-center w-full justify-center md:justify-start">
-				<nuxt-link to="/booking-types" class="bg-black text-white md:py-4 py-3 md:px-6 px-8 rounded-md md:text-[17px]">
+				<nuxt-link to="/dashboard" class="bg-black text-white md:py-4 py-3 md:px-6 px-8 rounded-md md:text-[17px]">
 					Create a Form
 				</nuxt-link>
 				<!-- <a class="md:text-xl font-semibold underline " href="https://www.youtube.com/watch?v=f3XQRsgvRTU&ab_channel=Kromate" target="_blank" rel="noopener noreferrer">Watch a Demo</a> -->

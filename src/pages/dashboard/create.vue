@@ -8,30 +8,24 @@
 
 <script setup lang="ts">
 import { usePageHeader } from '@/composables/utils/header'
-import { useCreateBookingType } from '@/composables/dashboard/bookingTypes/create'
+
 
 
 
 definePageMeta({
 	layout: 'dashboard',
 	middleware: ['is-authenticated', () => {
-usePageHeader().setPageHeader({
-	title: 'Create Booking Type',
-	description: 'Create a new booking type',
-	btnText: 'create  ',
-	btnCall: () => useCreateBookingType().create(),
-	loading: useCreateBookingType().loading,
-	shouldShowFab: false,
-	shouldShowTab: true
+		usePageHeader().setPageHeader({
+			title: 'Create Booking Type',
+			description: 'Create a new booking type',
+			btnText: 'create  ',
 
-})
-}, () => useCreateBookingType().resetForm()
+			shouldShowFab: false,
+			shouldShowTab: true
 
-
-	]
+		})
+	}]
 })
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
