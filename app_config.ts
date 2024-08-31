@@ -6,7 +6,7 @@
 export default {
     keepalive: true,
     head: {
-        title: 'Bookings - Simplified Bookings, Amplified Business',
+        title: 'Forms - Simplified Forms, Amplified Business',
         htmlAttrs: { lang: 'en' },
         viewport: 'width=device-width,initial-scale=1,viewport-fit=cover',
         bodyAttrs: { class: 'overflow-x-hidden' },
