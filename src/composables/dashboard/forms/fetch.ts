@@ -6,23 +6,24 @@ import { useUser } from '@/composables/auth/user'
 
 
 
-const fetchedBookings = ref([] as any[])
+const fetchedForms = ref([] as any[])
 
-const bookingIsEmpty = computed(() => {
-    return fetchedBookings.value.length === 0
+const FormIsEmpty = computed(() => {
+    return fetchedForms.value.length === 0
 })
 
-export const useFetchBookings = () => {
+export const useFetchForms = () => {
     const { id: user_id } = useUser()
     const loading = ref(false)
 
-    const fetchUserBookings = async () => {
+    const fetchUserForms = async () => {
         loading.value = true
-        fetchedBookings.value = []
+        fetchedForms.value = []
 
         try {
-            await getFirestoreCollectionWithWhereQuery('bookings', fetchedBookings, { name: 'user_id', operator: '==', value: user_id.value })
+            await getFirestoreCollectionWithWhereQuery('forms', fetchedForms, { name: 'user_id', operator: '==', value: user_id.value })
 
+            console.log(fetchedForms.value)
 
             loading.value = false
         } catch (e: any) {
@@ -31,6 +32,6 @@ export const useFetchBookings = () => {
         }
     }
 
-    return { loading, fetchedBookings, fetchUserBookings, bookingIsEmpty }
+    return { loading, fetchedForms, fetchUserForms, FormIsEmpty }
 }
 
