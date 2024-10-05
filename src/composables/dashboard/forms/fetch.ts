@@ -23,7 +23,6 @@ export const useFetchForms = () => {
         try {
             await getFirestoreCollectionWithWhereQuery('forms', fetchedForms, { name: 'user_id', operator: '==', value: user_id.value })
 
-            console.log(fetchedForms.value)
 
             loading.value = false
         } catch (e: any) {

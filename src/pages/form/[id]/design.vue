@@ -1,7 +1,7 @@
 <template>
-	<div class="min-h-screen flex items-center justify-center bg-gray-100 bg-pattern">
+	<div class="h-[86dvh] flex items-center justify-center bg-gray-100 bg-pattern p-4">
 		<div class="bg-white bg-opacity-90 rounded-xl p-12 text-center shadow-md border border-line">
-			<Clock class="w-16 h-16 mb-4 text-indigo-600 mx-auto" />
+			<Palette class="w-16 h-16 mb-4 text-indigo-600 mx-auto" />
 			<h1 class="text-4xl mb-4 text-gray-800">
 				Design section
 			</h1>
@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { Clock } from 'lucide-vue-next'
+import { Palette } from 'lucide-vue-next'
 import { useFetchFormById } from '@/composables/dashboard/forms/id'
 import { usePageHeader } from '@/composables/utils/header'
 
@@ -34,8 +34,8 @@ definePageMeta({
     'is-authenticated',
     () => {
       usePageHeader().setPageHeader({
-        title: 'Form Builder',
-        description: 'Create a new form'
+        title: 'Form Builder | Design',
+        description: 'Design your form'
       })
     }
   ]

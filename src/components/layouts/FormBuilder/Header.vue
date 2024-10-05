@@ -1,5 +1,5 @@
 <template>
-	<header class="grid gap-4 py-4 px-4 md:px-5 bg-transparent border-b lg:grid-cols-3 grid-cols-2">
+	<header class="grid gap-y-4 py-4 px-4 md:px-5 bg-transparent border-b lg:grid-cols-3 grid-cols-2 gap-0">
 		<section class="flex items-center gap-2 order-1 col-span-1">
 			<nuxt-link to="/dashboard" class="btn p-0.5">
 				<ChevronLeft />
@@ -34,6 +34,7 @@ import { usePageHeader } from '@/composables/utils/header'
 
 import Build from '@/pages/form/[id]/build.vue'
 import Design from '@/pages/form/[id]/design.vue'
+import Integrations from '@/pages/form/[id]/integrations.vue'
 import Results from '@/pages/form/[id]/results.vue'
 import Settings from '@/pages/form/[id]/settings.vue'
 
@@ -53,8 +54,8 @@ const updateTab = (tab: string) => {
 
 initTabs(
 	'Build',
-	['build', 'design', 'results', 'settings'],
-	markRaw({ Build, Design, Results, Settings })
+	['build', 'design', 'integrations', 'results', 'settings'],
+	markRaw({ Build, Design, Integrations, Results, Settings })
 )
 
 onMounted(() => {
