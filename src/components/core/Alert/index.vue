@@ -3,7 +3,8 @@
 	<transition-group
 		appear
 		tag="aside"
-		class="fixed top-4 right-4 z-[1000] w-auto flex flex-col-reverse gap-4 !transition-all !duration-300"
+		class="fixed  z-[1000] w-auto flex flex-col-reverse gap-4 !transition-all !duration-300"
+		:class="alertPosition === 'TOP' ? 'top-4 right-4' : 'bottom-4 right-4'"
 		name="list"
 	>
 		<AlertCard v-for="(alert, index) in openAlertArray" :id="alert.id" :key="alert.id" :data-index="index+1" :message="alert.msg" :addrs="alert.addrs" :type="alert.type" @closeAlert="closeAlert($event)" />
@@ -12,7 +13,7 @@
 
 <script setup lang="ts">
 import { useAlert } from '@/composables/core/notification'
-const { openAlertArray, closeAlert } = useAlert()
+const { openAlertArray, closeAlert, alertPosition } = useAlert()
 
 
 </script>

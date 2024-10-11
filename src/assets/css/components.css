@@ -24,6 +24,9 @@
     .input-field {
         @apply input;
     }
+    .input_field_gray {
+        @apply  bg-gray-100 py-2 h-auto rounded-md px-5 font-normal text-base  input border-light focus:border-dark hover:border-dark;
+    }
 
     .input-select {
         @apply input;

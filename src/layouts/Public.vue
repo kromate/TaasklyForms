@@ -1,5 +1,5 @@
 <template>
-	<div class=" min-h-screen w-full bg-grey">
+	<div class=" min-h-screen w-full ">
 		<section class="flex flex-col w-full">
 			<slot />
 		</section>

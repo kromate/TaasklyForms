@@ -3,7 +3,7 @@
 		<div class="grid grid-cols-12 mt-7 py-1 gap-6">
 			<article v-for="form in forms" :key="form.id" class="bg-white relative rounded-md mx-4 shadow-md hover:btn_shadow col-span-12 md:col-span-6 lg:col-span-3 border border-dark">
 				<a :href="`/form/${form.id}/build`" class="text-center px-2 h-40 flex items-center justify-center rounded-t-lg bg-cover bg-center bg-no-repeat" :style="{ backgroundColor: form.backgroundColor, color: form.textColor, backgroundImage: `url('${form.backgroundImage}')` }">
-					<h1 class="text-2xl font-light px-2 line-clamp-4">{{ form.name }}</h1>
+					<h1 class="text-2xl font-light px-2 line-clamp-4">{{ form.title || 'Untitled Form' }}</h1>
 				</a>
 				<div class="p-4 border-t border-gray-200 flex items-center justify-between">
 					<div>

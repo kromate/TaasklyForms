@@ -31,9 +31,11 @@
     "nuxt-gtag": "1.1.2",
     "radix-vue": "^1.8.2",
     "sass": "^1.69.5",
+    "tiny-uid": "^1.1.2",
     "uuid": "^9.0.0",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.6.7",
