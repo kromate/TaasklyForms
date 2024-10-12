@@ -7,11 +7,10 @@
 			View the results of your form.
 		</p>
 
-		<div v-if="submissionsLoading" class="flex justify-center items-center h-64">
-			<Spinner size="40px" />
-		</div>
 
-		<div v-else-if="fetchedFormSubmissions.length > 0">
+
+
+		<div v-if="form">
 			<Table
 				:headers="tableHeaders"
 				:table-data="tableData"
@@ -25,7 +24,7 @@
 			</Table>
 		</div>
 
-		<div v-else class="text-center text-gray-500">
+		<div v-if="FormSubmissionsIsEmpty && !submissionsLoading" class="text-center text-gray-500">
 			No submissions yet.
 		</div>
 	</div>
@@ -41,7 +40,7 @@ import { usePageHeader } from '@/composables/utils/header'
 const id = useRoute().params.id as string
 
 const { form, loading: formLoading, fetchFormById } = useFetchFormById()
-const { fetchedFormSubmissions, loading: submissionsLoading, fetchUserFormSubmissions } = useFetchFormSubmissions()
+const { fetchedFormSubmissions, loading: submissionsLoading, fetchUserFormSubmissions, FormSubmissionsIsEmpty } = useFetchFormSubmissions()
 
 // Fetch both form and submissions
 fetchFormById(id)
@@ -59,7 +58,6 @@ const tableHeaders = computed(() => {
 
 const tableData = computed(() => {
 	if (!form.value || !form.value.fields) return []
-
 	return fetchedFormSubmissions.value.map((submission) => {
 		const rowData = {}
 		for (const field of form.value.fields) {
