@@ -12,7 +12,7 @@
 			>
 				<div :key="field.pos" class="shadow-md p-4 pt-2 rounded-md border w-full">
 					<GripHorizontal class="cursor-move mx-auto mb-2" :size="20" />
-					<div class="flex justify-between items-center gap-2">
+					<div class="flex flex-wrap md:justify-between justify-end items-center gap-2">
 						<input v-model="field.label" type="text" class="input_field_gray w-auto flex-1" placeholder="Label">
 						<CustomSelect v-model="field.type" :options="fieldTypes" />
 					</div>
@@ -27,7 +27,7 @@
 							<template #item="{ index }">
 								<div class="flex items-center gap-3">
 									<GripVertical class="cursor-move" :size="16" />
-									<div class="border-2 border-line h-5 w-5" :class="field.type === 'CHECKBOX' ? 'rounded-sm' : 'rounded-full'" />
+									<div class="border-2 border-line h-5 w-5 box" :class="field.type === 'CHECKBOX' ? 'rounded-sm' : 'rounded-full'" />
 									<input
 										v-model="field.options[index]"
 										type="text"
@@ -90,6 +90,9 @@ watch(() => formFields.value, (newFields) => {
 </script>
 
 <style>
+.box{
+	@apply min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px]
+}
 .list-enter-active,
 .list-leave-active {
 	transition: all 0.5s ease;

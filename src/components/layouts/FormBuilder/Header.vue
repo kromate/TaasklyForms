@@ -83,8 +83,8 @@ const viewForm = () => {
 
 initTabs(
 	'Build',
-	['build', 'design', 'integrations', 'results', 'settings'],
-	markRaw({ Build, Design, Integrations, Results, Settings })
+	['build', 'results', 'design', 'integrations', 'settings'],
+	markRaw({ Build, Results, Design, Integrations, Settings })
 )
 
 watch(() => useRoute().name, (newVal) => {
