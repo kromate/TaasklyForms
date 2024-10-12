@@ -7,12 +7,13 @@
 			<p v-if="form.description" class="text-gray-600 mb-6">
 				{{ form.description }}
 			</p>
-			<form class="space-y-6" @submit.prevent="createFormSubmission">
+			<form class="space-y-6" @submit.prevent="createFormSubmission(form)">
 				<FormFieldType v-for="field in form.fields" :key="field.pos" v-model:form-data="formData" :field="field" />
 
 				<div>
-					<button type="submit" class="btn-primary w-full">
-						Submit
+					<button type="submit" :disabled="loading" class="btn-primary w-full">
+						<span v-if="!loading">Submit</span>
+						<Spinner v-else />
 					</button>
 				</div>
 			</form>
@@ -36,6 +37,11 @@ const id = useRoute().params.id as string
 			query: { id }
 	}) as { data: Ref<any>, error: any }
 
+
+useCustomHead({
+	title: form.value?.title || 'Taaskly Forms',
+	desc: form.value?.description || 'Create and manage custom forms with Taaskly'
+})
 
 definePageMeta({
 	layout: 'public'
